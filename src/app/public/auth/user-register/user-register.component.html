@@ -1,1 +1,43 @@
-<p>user-register works!</p>
+
+<div class="register-page">
+    <div class="content px20">
+      <form class="register-form" #myForm="ngForm" [formGroup]="registerForm">
+        <div class="title">
+          <h2 id="app-name" class="mat-display-1">Register</h2>
+        </div>
+        <div>
+            <div>
+                <mat-form-field class="form-field" appearance="fill">
+                  <input formControlName="displayName"  matInput placeholder="enter your name" name="Name" type="text" required>
+                </mat-form-field>
+              </div>
+          <div>
+            <mat-form-field class="form-field" appearance="fill">
+              <input formControlName="email" matInput placeholder="email" name="email" type="text" required>
+            </mat-form-field>
+          </div>
+            <div>
+            <mat-form-field class="form-field" appearance="fill">
+              <input formControlName="password" matInput placeholder="password" name="password">
+            </mat-form-field>
+          </div>
+        </div>
+       <!--  <div class="remember">
+          <mat-checkbox color="primary">Remember Me</mat-checkbox>
+          <a href="#">Forgot Password</a>
+        </div> -->
+        <div class="remember">
+          <mat-checkbox color="primary">Remember Me</mat-checkbox>
+          <a id="aa" href="#">Forgot Password</a>
+        </div>
+
+        <div class="footer-content">
+          <div class="btnfooter">
+            <button type="submit" mat-raised-button color="primary" routerLinkActive="activ" (click)="register()">Register</button>
+            <button type="button" mat-button color="primary" (click)="moveToLogin()">Login</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

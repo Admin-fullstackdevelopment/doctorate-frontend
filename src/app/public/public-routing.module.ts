@@ -6,8 +6,13 @@ import { childRoutes } from './public-child-routes';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  
   ...childRoutes
 
 ];

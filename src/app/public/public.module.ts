@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PublicRoutingModule } from './public-routing.module';
 import { HomeComponent } from './home/home.component';
 import { UserLoginComponent } from './auth/user-login/user-login.component';
@@ -20,6 +19,16 @@ import { LayoutComponent } from './layout/layout.component';
     PublicRoutingModule,
     MaterialModule
   ],
-  declarations: [HomeComponent, UserLoginComponent, UserRegisterComponent, UserProfileComponent, FooterComponent, DoctorComponent, ContactComponent, AboutComponent, PagenotfoundComponent, LayoutComponent],
+  declarations: [
+    HomeComponent, 
+    UserLoginComponent, 
+    UserRegisterComponent, 
+    UserProfileComponent, 
+    FooterComponent, 
+    DoctorComponent, 
+    ContactComponent, 
+    AboutComponent, 
+    PagenotfoundComponent, 
+    LayoutComponent],
 })
 export class PublicModule { }
