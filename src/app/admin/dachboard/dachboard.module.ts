@@ -10,7 +10,7 @@ import { DachboardComponent } from './dachboard/dachboard.component';
   imports: [
     CommonModule,
     DachboardRoutingModule,
-    MaterialModule // Material
+    MaterialModule
   ],
   declarations: [DachboardComponent]
 })

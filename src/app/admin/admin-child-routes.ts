@@ -6,5 +6,5 @@ export const childRoutes = [
       loadChildren: () =>
         import('./dachboard/dachboard.module').then(m => m.DachboardModule),
        data: { icon: 'dashboard', text: 'Dashboard' } 
-    }, 
+    },  
 ]

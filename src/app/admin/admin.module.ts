@@ -12,9 +12,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { DachboardModule } from './dachboard/dachboard.module';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
+import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 
 @NgModule({
   declarations: [
+  
+    AdminLoginComponent,
+       AdminLayoutComponent,
+       AddDoctorComponent
   ],
   imports: [
     CommonModule,

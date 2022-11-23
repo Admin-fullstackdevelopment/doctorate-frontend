@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DachboardComponent } from './dachboard/dachboard.component';
+import { HomeComponent } from './home/home.component';
+import { childRoutes } from './public-child-routes';
 
 const routes: Routes = [
   {
-    path:'',
-    component: DachboardComponent
-  }
+    path: '',
+    component: HomeComponent
+  },
+  ...childRoutes
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DachboardRoutingModule { }
+export class PublicRoutingModule { }
