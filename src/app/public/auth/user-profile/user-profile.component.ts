@@ -9,7 +9,7 @@ import { UserAuthService } from '../authService/userAuth.service';
 })
 export class UserProfileComponent {
 
-  data: any;
+  data: any = [];
 
   constructor(private _auth: UserAuthService, private _router: Router) { }
 

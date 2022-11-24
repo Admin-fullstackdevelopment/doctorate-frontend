@@ -9,7 +9,7 @@ import { AdminAuthService } from '../adminAuthService/adminAuth.service';
 })
 export class AdminProfileComponent {
 
-  data: any;
+  data: any = [];
 
   constructor(private _auth: AdminAuthService, private _router: Router) { }
 

@@ -48,3 +48,7 @@ padding-left: 22px;
   display: flex;
   flex-direction: column;
 }
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff; 
+}

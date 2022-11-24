@@ -11,24 +11,35 @@ import { DoctorComponent } from './doctor/doctor.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LayoutComponent } from './layout/layout.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
     CommonModule,
     PublicRoutingModule,
-    MaterialModule
+    MaterialModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   declarations: [
-    HomeComponent, 
-    UserLoginComponent, 
-    UserRegisterComponent, 
-    UserProfileComponent, 
-    FooterComponent, 
-    DoctorComponent, 
-    ContactComponent, 
-    AboutComponent, 
-    PagenotfoundComponent, 
-    LayoutComponent],
+    HomeComponent,
+    UserLoginComponent,
+    UserRegisterComponent,
+    UserProfileComponent,
+    FooterComponent,
+    DoctorComponent,
+    ContactComponent,
+    AboutComponent,
+    PagenotfoundComponent,
+  ],
 })
 export class PublicModule { }

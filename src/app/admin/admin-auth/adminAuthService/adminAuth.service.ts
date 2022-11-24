@@ -9,12 +9,12 @@ export class AdminAuthService {
 
   constructor(private _http: HttpClient) { }
 
-  signup(data: any):Observable<any> {
-    return this._http.post('http://localhost:8080/adminauth/register', data)
-  }
+ /*  signup(data: any):Observable<any> {
+    return this._http.post<any>('http://localhost:8080/adminauth/register', data)
+  } */
 
-  signin(data:any):Observable<any> {
-    return this._http.post('http://localhost:8080/adminauth/login', data)
+  signin(data:any){
+    return this._http.post<any>('http://localhost:8080/adminauth/login', data)
   }
 
   getProfile() {

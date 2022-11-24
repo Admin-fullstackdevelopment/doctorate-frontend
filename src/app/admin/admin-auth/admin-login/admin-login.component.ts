@@ -28,7 +28,7 @@ export class AdminLoginComponent {
         localStorage.setItem('token', res.token)
         this._router.navigate(['/admin/dachboard'])
         alert(res.message)
-      }else{
+      } else {
         alert(res.message)
       }
     }, err => {
