@@ -7,12 +7,13 @@ import { UserRegisterComponent } from './auth/user-register/user-register.compon
 import { ContactComponent } from './contact/contact.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './layout/layout.component';
 import { UserAuthGuard } from './userAuth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: '', component: HomeComponent, children: [
+    path: '', component: LayoutComponent, children: [
       {
         path: 'home',
         component: HomeComponent,

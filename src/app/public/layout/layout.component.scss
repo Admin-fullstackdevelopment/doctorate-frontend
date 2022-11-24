@@ -1,0 +1,48 @@
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+.toolbarList{
+    width: 100%;
+    align-items: center;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar,
+.mat-primary {
+    background: #0B152B;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#bewertung-verwalter{
+  align-items: center;
+  line-height: 1px;
+  font-size: x-small;
+  display: flex;
+  flex-direction:column;
+
+}
+
+.login{
+  padding-left: 3rem;
+}
+
+.toolbarList span{
+  color: white;
+  font-family: 'Barlow Semi Condensed';
+  font-size: 16px;
+}
