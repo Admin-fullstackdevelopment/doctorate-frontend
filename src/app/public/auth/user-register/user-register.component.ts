@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../authService/auth.service';
+import { UserAuthService } from '../authService/userAuth.service';
 
 @Component({
   selector: 'app-user-register',
@@ -15,7 +15,7 @@ export class UserRegisterComponent {
   className ='d-none'
   isProcess:boolean = false;
 
-  constructor(private _router: Router, private fb: FormBuilder, private _auth: AuthService) {
+  constructor(private _router: Router, private fb: FormBuilder, private _auth: UserAuthService) {
     this.registerForm = this.fb.group({
       'displayName': ['', Validators.required],
       'email': ['', Validators.required],

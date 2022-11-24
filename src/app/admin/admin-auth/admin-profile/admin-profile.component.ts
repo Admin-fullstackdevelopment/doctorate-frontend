@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserAuthService } from '../authService/userAuth.service';
+import { AdminAuthService } from '../adminAuthService/adminAuth.service';
 
 @Component({
-  selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss']
+  selector: 'app-admin-profile',
+  templateUrl: './admin-profile.component.html',
+  styleUrls: ['./admin-profile.component.scss']
 })
-export class UserProfileComponent {
+export class AdminProfileComponent {
 
   data: any;
 
-  constructor(private _auth: UserAuthService, private _router: Router) { }
+  constructor(private _auth: AdminAuthService, private _router: Router) { }
 
   ngOnInit(): void {
     this.getProfile()
@@ -26,11 +26,11 @@ export class UserProfileComponent {
       }
     }, err => {   
     })
-
+    
   }
   logout(){
     localStorage.clear()
-    this._router.navigate(['/login'])
+    this._router.navigate(['/admin'])
   }
 
 }

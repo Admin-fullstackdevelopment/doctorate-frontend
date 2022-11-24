@@ -5,28 +5,29 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from '../material.module';
 
 //Components:
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { LayoutModule } from '@angular/cdk/layout';
 import { DachboardModule } from './dachboard/dachboard.module';
+import { AdminAuthModule } from './admin-auth/admin-auth.module';
+import { AddDoctorModule } from './add-doctor/add-doctor.module';
+import { AdminLayoutModule } from './admin-layout/admin-layout.module';
 
-@NgModule({
-  declarations: [],
+@NgModule({ // hier müssen alle Modules von Admin importieren
   imports: [
     CommonModule,
     AdminRoutingModule,
+    AdminAuthModule,
     MaterialModule,
+    DachboardModule,
+    AddDoctorModule,
+    AdminLayoutModule
+  ],
+  declarations: [],
+})
+export class AdminModule { }
+
+    /* MaterialModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    LayoutModule,
-    MaterialModule,
-    DachboardModule
-  ]
-})
-export class AdminModule { }
+    LayoutModule, */

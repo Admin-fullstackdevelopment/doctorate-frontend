@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './public/auth/authService/auth.service';
+import { UserAuthService } from './public/auth/authService/userAuth.service';
 import { PublicModule } from './public/public.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AuthGuard } from '../authGuard/auth.guard';
+import { UserAuthGuard } from './public/userAuth.guard';
+import { AdminAuthGuard } from './admin/admin-auth.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AuthGuard } from '../authGuard/auth.guard';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthGuard,AuthService],
+  providers: [UserAuthGuard, UserAuthService, AdminAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
