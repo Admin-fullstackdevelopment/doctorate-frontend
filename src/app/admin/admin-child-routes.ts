@@ -16,4 +16,19 @@ export const childRoutes = [
       loadChildren: () =>
         import('./admin-auth/admin-auth.module').then(m => m.AdminAuthModule),
     },
+    {
+      path: 'doctor',
+      loadChildren: () =>
+        import('./add-doctor/add-doctor.module').then(m => m.AddDoctorModule),
+    },
+    {
+      path: 'layout',
+      loadChildren: () =>
+        import('./admin-layout/admin-layout.module').then(m => m.AdminLayoutModule),
+    },  
+    {
+      path: 'dialog',
+      loadChildren: () =>
+        import('./add-doctor//add-doctor.module').then(m => m.AddDoctorModule),
+    },  
 ]

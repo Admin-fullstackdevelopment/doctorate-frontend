@@ -26,7 +26,7 @@ export class AdminLoginComponent {
     this._auth.signin(data).subscribe((res) => {
       if (res.success) {
         localStorage.setItem('token', res.token)
-        this._router.navigate(['/admin/dachboard'])
+        this._router.navigate(['/admin/layout'])
         alert(res.message)
       } else {
         alert(res.message)

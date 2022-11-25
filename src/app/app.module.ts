@@ -10,6 +10,7 @@ import { PublicModule } from './public/public.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserAuthGuard } from './public/userAuth.guard';
 import { AdminAuthGuard } from './admin/admin-auth.guard';
+import { DoctorService } from './admin/add-doctor/doctorService/doctor.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { AdminAuthGuard } from './admin/admin-auth.guard';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserAuthGuard, UserAuthService, AdminAuthGuard],
+  providers: [UserAuthGuard, UserAuthService, AdminAuthGuard, DoctorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

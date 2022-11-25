@@ -16,7 +16,7 @@ export class AdminAuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
 
       if (!this.adminAuthService.isLoggedIn()) {
-        this._router.navigate(['/admin/dachnoard']); // go to login if not authenticated
+        this._router.navigate(['/admin/login']); // go to login if not authenticated
         return false;
       }
     return true;
