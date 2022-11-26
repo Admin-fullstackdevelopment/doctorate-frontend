@@ -6,6 +6,7 @@ import { UserProfileComponent } from './auth/user-profile/user-profile.component
 import { UserRegisterComponent } from './auth/user-register/user-register.component';
 import { ContactComponent } from './contact/contact.component';
 import { DoctorComponent } from './doctor/doctor.component';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LayoutComponent } from './layout/layout.component';
 import { UserAuthGuard } from './userAuth.guard';
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: 'about',
         component: AboutComponent,
+      },
+      {
+        path: 'footer',
+        component: FooterComponent,
       }
 
     ]
