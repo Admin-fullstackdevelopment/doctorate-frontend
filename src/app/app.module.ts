@@ -9,8 +9,10 @@ import { UserAuthService } from './public/auth/authService/userAuth.service';
 import { PublicModule } from './public/public.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserAuthGuard } from './public/userAuth.guard';
-import { AdminAuthGuard } from './admin/admin-auth.guard';
 import { DoctorService } from './admin/add-doctor/doctorService/doctor.service';
+import { AdminAuthGuard } from './core/admin-auth.guard';
+import { AdminAuthModule } from './admin-auth/admin-auth.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,14 @@ import { DoctorService } from './admin/add-doctor/doctorService/doctor.service';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    PublicModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    PublicModule,
+    AdminAuthModule,
+    AdminModule,
+
+
   ],
   providers: [UserAuthGuard, UserAuthService, AdminAuthGuard, DoctorService],
   bootstrap: [AppComponent]

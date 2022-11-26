@@ -30,7 +30,7 @@ export class AdminProfileComponent {
   }
   logout(){
     localStorage.clear()
-    this._router.navigate(['/admin'])
+    this._router.navigate(['/auth'])
   }
 
 }

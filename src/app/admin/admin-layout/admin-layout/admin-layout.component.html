@@ -1,1 +1,45 @@
-<p>admin-layout works!</p>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="dachboard" routerLinkActive="active">Dachboard</a>
+      <a mat-list-item routerLink="add-doctor" routerLinkActive="active">Table</a>
+      <a mat-list-item routerLink="profile" routerLinkActive="active">Profile</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a aria-label="login" aria-disabled="false" routerLink="/auth"
+          routerLinkActive="active">
+          
+      <img _ngcontent-csm-c49="" [src]="img" alt="logo" width="100px">
+    </a>
+      <div class="login">
+        <a mat-button="" color="white" aria-label="login" aria-disabled="false" routerLink="/auth"
+          routerLinkActive="active">
+          <div class="mat-button-wrapper">
+            <div>
+              <mat-icon>perm_identity</mat-icon>
+              <span>Login</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

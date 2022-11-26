@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DoctorComponent } from 'src/app/public/doctor/doctor.component';
+import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { DialogComponent } from './dialog/dialog.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: DoctorComponent
+    component: AddDoctorComponent
   },
   {
     path: '',

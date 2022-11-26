@@ -1,19 +1,56 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserProfileComponent } from '../public/auth/user-profile/user-profile.component';
+import { AdminProfileComponent } from '../admin-auth/admin-profile/admin-profile.component';
 import { AdminLayoutComponent } from './admin-layout/admin-layout/admin-layout.component';
-import { AddDoctorComponent } from './add-doctor/add-doctor/add-doctor.component';
-import { AdminAuthGuard } from './admin-auth.guard';
-import { AdminLoginComponent } from './admin-auth/admin-login/admin-login.component';
-import { AdminProfileComponent } from './admin-auth/admin-profile/admin-profile.component';
-import { childRoutes } from './admin-child-routes';
-import { DachboardComponent } from './dachboard/dachboard/dachboard.component';
+import { childRoutes } from './child-routes';
+
+
+/* const routes: Routes = [
+  {
+    path: '',
+    component: NavigationComponent,
+    children:[
+      {
+        path: 'dachboard',
+        component: DachboardComponent
+      }, 
+      {
+        path: 'doctor',
+        component: AddDoctorComponent
+      }
+    ]
+  }
+];
+ */
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'layout',
-    pathMatch: 'full'
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: 'profile',
+        component: AdminProfileComponent
+      },
+      ...childRoutes
+    ]
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class AdminRoutingModule { }
+
+
+
+
+/* 
+const routes: Routes = [
+  {
+    path: '',
+    component: AdminLayoutComponent,
   },
   {
     path: '',
@@ -41,10 +78,4 @@ const routes: Routes = [
 
     ]
   }
-]
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class AdminRoutingModule { }
+] */
