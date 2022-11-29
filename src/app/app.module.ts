@@ -26,12 +26,9 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
-
     PublicModule,
     AdminAuthModule,
-    AdminModule,
-
-
+    AdminModule
   ],
   providers: [UserAuthGuard, UserAuthService, AdminAuthGuard, DoctorService],
   bootstrap: [AppComponent]

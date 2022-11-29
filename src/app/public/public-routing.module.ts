@@ -4,7 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { UserLoginComponent } from './auth/user-login/user-login.component';
 import { UserProfileComponent } from './auth/user-profile/user-profile.component';
 import { UserRegisterComponent } from './auth/user-register/user-register.component';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/contact/contact.component';
 import { DoctorComponent } from './doctor/doctor.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';

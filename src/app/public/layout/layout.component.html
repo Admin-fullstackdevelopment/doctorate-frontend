@@ -78,7 +78,7 @@
 
       <!-- Sprahce -->
       <div class="languageMenu">
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="language">
           <mat-icon>translate</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
@@ -90,6 +90,22 @@
           </button>
           <button mat-menu-item>
             <span>English</span>
+          </button>
+        </mat-menu>
+      </div>
+
+      <div class="user">
+        <button mat-icon-button [matMenuTriggerFor]="user" aria-label="user menu">
+          <mat-icon>supervisor_account</mat-icon>
+        </button>
+        <mat-menu #user="matMenu">
+          <button mat-menu-item>
+            <mat-icon>supervisor_account</mat-icon>
+            <span>Logout</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Helfe</span>
           </button>
         </mat-menu>
       </div>
@@ -113,4 +129,3 @@
     <app-footer></app-footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-

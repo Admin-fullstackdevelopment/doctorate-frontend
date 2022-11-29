@@ -1,0 +1,28 @@
+<div class="contener">
+<h1>Kontaktieren Sie uns</h1>
+
+<div class="form-container">
+    <form class="form" [formGroup]="nodeMailerForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input type="vorname" matInput #email placeholder="vorname" nodeMailerForm="vorname">
+        </mat-form-field>
+    <mat-form-field>
+            <mat-label>Nachname</mat-label>
+            <input type="nachname" matInput #email placeholder="nachname" nodeMailerForm="nachname">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput #email placeholder="email" nodeMailerForm="email">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Comment</mat-label>
+            <textarea matInput placeholder="Leave a comment.." nodeMailerForm="comment"></textarea>
+        </mat-form-field>
+        <br>
+        <div class="submit">
+        <button mat-raised-button color="accent" type="submit" (click)="sendMail()">Submit</button>
+    </div>
+    </form>
+</div>
+</div> 

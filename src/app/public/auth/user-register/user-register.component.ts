@@ -52,7 +52,6 @@ export class UserRegisterComponent {
         this.isProcess = false;
         this.message = "Server Error!!";
         this.className = 'alert alert-danger'
-      })
-      
+      })   
   }
 }

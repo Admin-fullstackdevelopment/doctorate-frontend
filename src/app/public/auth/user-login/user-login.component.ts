@@ -32,7 +32,7 @@ export class UserLoginComponent implements OnInit{
       if (res.success) {
         localStorage.setItem('token', res.token)
         this._router.navigate(['/profile'])
-        /* alert(res.message) */
+        alert(res.message)
       }else{
         alert(res.message)
       }
@@ -41,7 +41,6 @@ export class UserLoginComponent implements OnInit{
     })
   }
 }
-
 
 /* import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
