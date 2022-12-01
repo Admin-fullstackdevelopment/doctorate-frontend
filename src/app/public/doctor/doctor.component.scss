@@ -1,0 +1,57 @@
+*{
+  background-color: #0B152B;
+  color: white;
+}
+.card {
+  max-width: 320px;
+  background-color: #0B152B;
+  /* Delete box shadow */
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+img{
+border-radius: 20%;
+}
+
+.example-header-image {
+  background-image: url('/../assets/public/doctor/DR-logo.png');
+  background-size: cover;
+}
+
+.container{
+  padding: 3rem;
+  display: flex;
+  flex-direction: row; // fxLayout
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+mat-card-subtitle, mat-card-title, p{
+  font-family: 'Almarai';
+}
+mat-card-subtitle{
+  margin-top: 3px;
+  font-size: 13px;
+}
+p{
+  margin-top: 1rem;
+  font-size: 18px;
+}
+mat-card-content{
+  text-align: center;
+  margin-top: 1rem;
+}
+.checked {
+  color: orange;
+}
+/*
+  display: flex;
+  flex-direction: row; // fxLayout
+  flex-wrap: wrap; //fxLayout
+  box-sizing: border-box;
+  align-content: stretch; // fxLayoutAlign
+  align-items: stretch; // fxLayoutAlign
+  justify-content: flex-start // fxLayoutAlign
+    */

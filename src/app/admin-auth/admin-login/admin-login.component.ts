@@ -27,7 +27,7 @@ export class AdminLoginComponent {
       if (res.success) {
         localStorage.setItem('token', res.token)
         this._router.navigate(['/admin/profile'])
-        /* alert(res.message) */
+         alert(res.message)
       } else {
         alert(res.message)
       }
