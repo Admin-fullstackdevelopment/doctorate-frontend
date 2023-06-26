@@ -1,0 +1,131 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === true">
+    <mat-toolbar>Doctor</mat-toolbar>
+
+    <mat-nav-list>
+      <a mat-list-item routerLink="doctor">Doctor</a>
+      <a mat-list-item routerLink="#">Bewertung</a>
+      <a mat-list-item routerLink="#">Über uns</a>
+      <a mat-list-item routerLink="contact">Konntakt</a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <div class="logo">
+        <a _ngcontent-csm-c49="" mat-button="" [routerLink]="['/home']" aria-label="Doctorate" class="mat-focus-indicator 
+        docs-button mat-button mat-button-base" aria-disabled="false">
+          <span class="mat-button-wrapper">
+            <img _ngcontent-csm-c49="" [src]="img" alt="logo" width="80px">
+          </span>
+        </a>
+      </div>
+
+      <div class="toolbarList">
+        <a mat-button="" aria-label="language" aria-disabled="false" routerLink="doctor" style="margin-left: 1rem">
+          <span class="mat-button-wrapper">
+            <!-- <img _ngcontent-scd-c49="" [src]="img" alt="Login"  width="80px" class="docs-angular-logo"> -->
+            Deine Ärzte
+          </span>
+        </a>
+
+        <a mat-button="" aria-label="reviews" aria-disabled="false" routerLink="reviews">
+          <span class="mat-button-wrapper">
+            Bewertung
+          </span>
+        </a>
+
+        <a mat-button="" aria-label="about" aria-disabled="false" routerLink="about">
+          <span class="mat-button-wrapper">
+            Über Uns
+          </span>
+        </a>
+
+        <a mat-button="" aria-label="contact" aria-disabled="false" routerLink="contact">
+          <span class="mat-button-wrapper">
+            Konntakt
+          </span>
+        </a>
+
+      </div>
+
+      <!-- Social Media -->
+      <div class="socialMedia">
+        <a mat-icon-button="" href="http://www.skype.com" aria-label="language" aria-disabled="false">
+          <span class="mat-button-wrapper">
+            <mat-icon>call</mat-icon>
+          </span>
+        </a>
+
+        <a mat-icon-button="" color="warn" href="http://www.google.com" aria-label="language" aria-disabled="false">
+          <span class="mat-button-wrapper">
+            <mat-icon>favorite</mat-icon>
+          </span>
+        </a>
+
+        <a mat-icon-button="" color="white" href="http://www.gmx.de" aria-label="language" aria-disabled="false">
+          <span class="mat-button-wrapper">
+            <mat-icon>email</mat-icon>
+          </span>
+        </a>
+      </div>
+
+      <!-- Sprahce -->
+      <div class="languageMenu">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="language">
+          <mat-icon>translate</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <span>Arabic</span>
+          </button>
+          <button mat-menu-item disabled>
+            <span>Deutsch</span>
+          </button>
+          <button mat-menu-item>
+            <span>English</span>
+          </button>
+        </mat-menu>
+      </div>
+
+      <div class="user">
+        <button mat-icon-button [matMenuTriggerFor]="user" aria-label="user menu">
+          <mat-icon>supervisor_account</mat-icon>
+        </button>
+        <mat-menu #user="matMenu">
+          <button mat-menu-item routerLink="profile">
+            <mat-icon>supervisor_account</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Helfe</span>
+          </button>
+        </mat-menu>
+      </div>
+
+      <div class="login">
+        <a mat-button="" color="white" aria-label="language" aria-disabled="false" routerLink="/login"
+          routerLinkActive="active">
+          <div class="mat-button-wrapper">
+            <div>
+              <mat-icon>perm_identity</mat-icon>
+              <span>Einlogen</span>
+            </div>
+            <span id="bewertung-verwalter" style="opacity: 0.7; font-size: 10px;  color: yellow;">Bewertung
+              hinzufügen</span>
+          </div>
+        </a>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,147 @@
+<h1 mat-dialog-title>Add Doctor Form</h1>
+<div mat-dialog-content>
+
+  <!-- FORM -->
+  <form [formGroup]="doctorForm">
+
+    <!-- Vorname Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Vorname</mat-label>
+    <input formControlName="vorname" matInput placeholder="Vorname">
+  </mat-form-field>
+
+  <!-- Nachname Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Nachname</mat-label>
+    <input formControlName="nachname" matInput placeholder="nachname">
+  </mat-form-field>
+
+  <!-- Email Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input formControlName="email" matInput placeholder="email">
+  </mat-form-field>
+
+  <!-- Fach Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Fach</mat-label>
+    <mat-select formControlName="fach" placeholder="fach">
+      <mat-option value="Allgemeinmedizin">Allgemeinmedizin</mat-option>
+      <mat-option value="Innere und Allgemeinmedizin">Innere und Allgemeinmedizin</mat-option>
+      <mat-option value="Anästhesiologie">Anästhesiologie</mat-option>
+      <mat-option value="Anatomie">Anatomie</mat-option>
+      <mat-option value="Arbeitsmedizin">Arbeitsmedizin</mat-option>
+      <mat-option value="Augenheilkunde">Augenheilkunde</mat-option>
+      <mat-option value="Biochemie">Biochemie</mat-option>
+      <mat-option value="Allgemeinchirurgie">Allgemeinchirurgie</mat-option>
+      <mat-option value="Allgemeine Chirurgie">Allgemeine Chirurgie</mat-option>
+      <mat-option value="Chirurgie">Chirurgie</mat-option>
+      <mat-option value="Gefäßchirurgie">Gefäßchirurgie</mat-option>
+      <mat-option value="Herzchirurgie">Herzchirurgie</mat-option>
+      <mat-option value="Kinderchirurgie">Kinderchirurgie</mat-option>
+      <mat-option value="Orthopädie">Orthopädie</mat-option>
+      <mat-option value="Orthopädie und Unfallchirurgie">Orthopädie und Unfallchirurgie</mat-option>
+      <mat-option value="Plastische Chirurgie">Plastische Chirurgie</mat-option>
+      <mat-option value="Plastische und Ästhetische Chirurgie">Plastische und Ästhetische Chirurgie</mat-option>
+      <mat-option value="Thoraxchirurgie">Thoraxchirurgie</mat-option>
+      <mat-option value="Visceralchirurgie">Visceralchirurgie</mat-option>
+      <mat-option value="Viszeralchirurgie">Viszeralchirurgie</mat-option>
+      <mat-option value="Frauenheilkunde und Geburtshilfe">Frauenheilkunde und Geburtshilfe</mat-option>
+      <mat-option value="Gynäkologie und Geburtshilfe">Gynäkologie und Geburtshilfe</mat-option>
+      <mat-option value="Hals-Nasen-Ohrenheilkunde">Hals-Nasen-Ohrenheilkunde</mat-option>
+      <mat-option value="Phoniatrie und Pädaudiologie">Phoniatrie und Pädaudiologie</mat-option>
+      <mat-option value="Sprach-, Stimm- und kindliche Hörstörungen">Sprach-, Stimm- und kindliche Hörstörungen</mat-option>
+      <mat-option value="Haut- und Geschlechtskrankheiten">Haut- und Geschlechtskrankheiten</mat-option>
+      <mat-option value="Humangenetik">Humangenetik</mat-option>
+      <mat-option value="Hygiene und Umweltmedizin">Hygiene und Umweltmedizin</mat-option>
+      <mat-option value="Innere Medizin">Innere Medizin</mat-option>
+      <mat-option value="Innere Medizin u. Endokrinologie u. Diabetologie">Innere Medizin u. Endokrinologie u. Diabetologie</mat-option>
+      <mat-option value="Innere Medizin u. SP Endokrinolog. u. Diabetolog.">Innere Medizin u. SP Endokrinolog. u. Diabetolog.</mat-option>
+      <mat-option value="Innere Medizin und Angiologie">Innere Medizin und Angiologie</mat-option>
+      <mat-option value="Innere Medizin und Gastroenterologie">Innere Medizin und Gastroenterologie</mat-option>
+      <mat-option value="Innere Medizin und Geriatrie">Innere Medizin und Geriatrie</mat-option>
+      <mat-option value="Innere Medizin und Hämatologie und Onkologie">Innere Medizin und Hämatologie und Onkologie</mat-option>
+      <mat-option value="Innere Medizin und Kardiologie">Innere Medizin und Kardiologie</mat-option>
+      <mat-option value="Innere Medizin und Nephrologie">Innere Medizin und Nephrologie</mat-option>
+      <mat-option value="Innere Medizin und Pneumologie">Innere Medizin und Pneumologie</mat-option>
+      <mat-option value="Innere Medizin und Rheumatologie">Innere Medizin und Rheumatologie</mat-option>
+      <mat-option value="Innere Medizin und SP Angiologie">Innere Medizin und SP Angiologie</mat-option>
+      <mat-option value="Innere Medizin und SP Gastroenterologie">Innere Medizin und SP Gastroenterologie</mat-option>
+      <mat-option value="Innere Medizin und SP gesamte Innere Medizin">Innere Medizin und SP gesamte Innere Medizin</mat-option>
+      <mat-option value="Innere Medizin und SP Hämatologie u. Onkologie">Innere Medizin und SP Hämatologie u. Onkologie</mat-option>
+      <mat-option value="Innere Medizin und SP Kardiologie">Innere Medizin und SP Kardiologie</mat-option>
+      <mat-option value="Innere Medizin und SP Nephrologie">Innere Medizin und SP Nephrologie</mat-option>
+      <mat-option value="Innere Medizin und SP Pneumologie">Innere Medizin und SP Pneumologie</mat-option>
+      <mat-option value="Innere Medizin und SP Rheumatologie">Innere Medizin und SP Rheumatologie</mat-option>
+      <mat-option value="Kinderheilkunde">Kinderheilkunde</mat-option>
+      <mat-option value="Kinder- und Jugendmedizin">Kinder- und Jugendmedizin</mat-option>
+      <mat-option value="Kinder- und Jugendpsychiatrie">Kinder- und Jugendpsychiatrie</mat-option>
+      <mat-option value="Kinder- und Jugendpsychiatrie u. -psychotherapie">Kinder- und Jugendpsychiatrie u. -psychotherapie</mat-option>
+      <mat-option value="Laboratoriumsmedizin">Laboratoriumsmedizin</mat-option>
+      <mat-option value="Mikrobiologie und Infektionsepidemiologie">Mikrobiologie und Infektionsepidemiologie</mat-option>
+      <mat-option value="Mikrobiologie, Virologie u. Infektionsepidemiologie">Mikrobiologie, Virologie u. Infektionsepidemiologie</mat-option>
+      <mat-option value="Kieferchirurgie">Kieferchirurgie</mat-option>
+      <mat-option value="Mund-Kiefer-Gesichtschirurgie">Mund-Kiefer-Gesichtschirurgie</mat-option>
+      <mat-option value="Nervenheilkunde">Nervenheilkunde</mat-option>
+      <mat-option value="Neurochirurgie">Neurochirurgie</mat-option>
+      <mat-option value="Neurologie">Neurologie</mat-option>
+      <mat-option value="Neurologie und Psychiatrie (Nervenarzt)">Neurologie und Psychiatrie (Nervenarzt)</mat-option>
+      <mat-option value="Nuklearmedizin">Nuklearmedizin</mat-option>
+      <mat-option value="Öffentliches Gesundheitswesen">Öffentliches Gesundheitswesen</mat-option>
+      <mat-option value="Neuropathologie">Neuropathologie</mat-option>
+      <mat-option value="Pathologie">Pathologie</mat-option>
+      <mat-option value="Klinische Pharmakologie">Klinische Pharmakologie</mat-option>
+      <mat-option value="Pharmakologie und Toxikologie">Pharmakologie und Toxikologie</mat-option>
+      <mat-option value="Physikalische und Rehabilitative Medizin">Physikalische und Rehabilitative Medizin</mat-option>
+      <mat-option value="Physiologie">Physiologie</mat-option>
+      <mat-option value="Psychiatrie">Psychiatrie</mat-option>
+      <mat-option value="Psychiatrie und Psychotherapie">Psychiatrie und Psychotherapie</mat-option>
+      <mat-option value="Psychotherapeutische Medizin">Psychotherapeutische Medizin</mat-option>
+      <mat-option value="Psychosomatische Medizin und Psychotherapie">Psychosomatische Medizin und Psychotherapie</mat-option>
+      <mat-option value="Diagnostische Radiologie">Diagnostische Radiologie</mat-option>
+      <mat-option value="Radiologie">Radiologie</mat-option>
+      <mat-option value="Radiologische Diagnostik">Radiologische Diagnostik</mat-option>
+      <mat-option value="Rechtsmedizin">Rechtsmedizin</mat-option>
+      <mat-option value="Strahlentherapie">Strahlentherapie</mat-option>
+      <mat-option value="Transfusionsmedizin">Transfusionsmedizin</mat-option>
+      <mat-option value="Urologie">Urologie</mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Adresse Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Adresse</mat-label>
+    <input formControlName="adresse" matInput placeholder="adresse">
+  </mat-form-field>
+
+  <!-- Stadt Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Stadt</mat-label>
+    <input formControlName="stadt" matInput placeholder="stadt">
+  </mat-form-field>
+
+  <!-- Telefonnummer Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Telefonnummer</mat-label>
+    <input formControlName="telefonnummer" matInput placeholder="telefonnummer">
+  </mat-form-field>
+
+  <!-- Sprache Form -->
+  <mat-form-field appearance="outline">
+    <mat-label>Sprache</mat-label>
+    <mat-select  formControlName="sprache" placeholder="sprache">
+      <mat-option value="Deutsch">Deutsch</mat-option>
+      <mat-option value="Deutsch">Arabic</mat-option>
+      <mat-option value="Deutsch">English</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  </form>
+</div>
+
+<div mat-dialog-action [align]="'end'" style="margin-right: 1.5rem;
+margin-bottom: 1.2rem;">
+<button mat-raised-button color="warn" mat-dialog-close>Close</button>
+<button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addDoctor()">{{actionBtn}}</button>
+</div>

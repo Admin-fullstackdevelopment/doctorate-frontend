@@ -1,0 +1,57 @@
+ .login-page {
+   background-color: #0B152B;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   height: 100%;
+ }
+
+ .content {
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ //Title:
+ #app-name {
+   padding-bottom: 20px;
+   text-align: center;
+   font-weight: 1000;
+   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+ }
+
+ .mat-display-1,
+ .mat-typography .mat-display-1 {
+   font: 400 34px/40px Roboto, "Helvetica Neue", sans-serif;
+   letter-spacing: normal;
+ }
+
+ .form-field {
+   width: 100%;
+ }
+
+ .remember a {
+   padding-left: 22px;
+ }
+
+ .login-form {
+   padding: 30px;
+   width: 400px;
+   background: white;
+   max-width: 500px;
+   box-shadow: 0 0 16px rgb(0, 0, 0);
+   min-width: 150px;
+ }
+
+ .btnfooter {
+   padding-top: 1rem;
+   display: flex;
+   flex-direction: column;
+ }
+
+ //Set background without color:
+/* ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+   background-color: transparent;
+ }  */

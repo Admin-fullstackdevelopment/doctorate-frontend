@@ -1,0 +1,34 @@
+<div class="login-page">
+  <div class="content px20">
+    <form class="login-form" #myForm="ngForm" [formGroup]="loginForm">
+      <div class="title">
+        <h2 id="app-name" class="mat-display-1">Login</h2>
+      </div>
+      <div>
+        <div>
+          <mat-form-field class="form-field" Appearance="fill">
+            <input matInput formControlName="email" matInput placeholder="email" name="email" type="text" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="form-field" appearance="fill">
+            <input matInput formControlName="password" placeholder="password" name="password">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="remember">
+        <mat-checkbox color="primary">Remember Me</mat-checkbox>
+        <a id="aa" href="#">Forgot Password</a>
+      </div>
+
+      <div class="footer-content">
+        <div class="btnfooter">
+          <button type="submit" mat-raised-button color="primary" routerLinkActive="activ"
+            (click)="login()">Login</button>
+          <button type="button" mat-button color="primary" (click)="moveToRegister()">Register</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

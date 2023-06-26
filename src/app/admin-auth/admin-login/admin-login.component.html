@@ -1,0 +1,29 @@
+<div class="login-page">
+  <div class="content px20">
+    <form class="login-form"  #myForm="ngForm" [formGroup]="loginForm">
+      <div class="title">
+        <h2 id="app-name" class="mat-display-1">Admin Login</h2>
+      </div>
+      <div>
+        <div>
+          <mat-form-field class="form-field" appearance="fill">
+            <input formControlName="email" matInput placeholder="email" name="email" type="text" required>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field class="form-field" appearance="fill">
+            <input formControlName="password" matInput placeholder="password" name="password">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <div class="btnfooter">
+          <button type="submit" mat-raised-button color="primary" routerLinkActive="activ"
+            (click)="login()">Login</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
